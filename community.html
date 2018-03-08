@@ -1,10 +1,44 @@
 ## What I give back to the Komodo community
-Because I am technician, most of my activities will be related to 
-- cooperate with other Notary Node Operators
+
+My proposal is based around Notary nodes modernization. Currently in order to run notary node,
+physical server is needed with a lot of disk space and RAM. Standard servers allow you to scale only 
+vertically, which means adding RAM modules or disks. 
+What about if we split the load between multiple servers? By cutting Komodo/Iguana/Bitcoin/assetchains 
+into smaller pieces (containers), we could run each piece of the puzzle on 
+
+
+{: style="text-align: left;"}
 - refactor scripts in komodo repo 
+{: style="text-align: left;"}
+
+<iframe src="https://ghbtns.com/github-btn.html?user=patchkez&repo=kmdplatform&count=false&size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
+
 - dockerize Bitcoin/Komodo/Iguana combo to make the deployment frictionless
+{: style="text-align: left;"}
 - decouple NN software from baremetal and deploy it into Openshift/Kubernetes
+{: style="text-align: left;"}
 - I was thinking to have central docker registry with signed images
+{: style="text-align: left;"}
+
+### Pros of proposed solution
+- portability across machines
+  Docker containers can be build and test locally on dev/test server and final images can be then deployed to Notary Node and started.
+
+- version control 
+  
+
+- sharing images
+  If operators will start using such solution, i
+
+- minimal overhead
+  Docker containers 
+  
+- high availability
+  Because containers can talk to each other over network, 
+
+- scalability 
+  Adding new node to cluster is possible.
+
 
 <!--
 Github's Octocat was designed by Simon Oxley, alongside the white bird Twitter used (before they received a proper logo) as part of a usual routine of cranking out images for iStock. GitHub saw it, and wanted it, presumably under the notion that it can represent how complex code combines to create peculiar things, much like the octopuss... except the CEO of GitHub called it an octocat, and it has been the octocat since <a href="https://www.quora.com/GitHub/What-is-the-story-behind-GitHub%E2%80%99s-octocat-mascot" target="_blank">[via]</a>.
