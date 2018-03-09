@@ -14,9 +14,9 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Blog1111 and website of John Smith, blogging mainly for tech. Opinions expressed are mine.">
+  <meta name="description" content="patchkez - Komodo Notary Node Candidate">
   <meta name="author" content="patchkez">
-  <meta name="keywords" content="smith, jones, personal, jekyll, theme">
+  <meta name="keywords" content="patchkez, personal, komodo, jekyll, theme">
   <link rel="canonical" href="/">
   <title>{ patchkez }</title>
 
@@ -276,7 +276,7 @@ If you want to have a static message in your intro layout, disable the dynamic-t
   <div class="row">
     <div class="col-md-10 col-md-offset-1">
       <h2 id="motivation">Motivation</h2>
-<p>I am entering this year Notary Nodes electionis on my own. I do not have any manager or team behind me. I joined because I thought it might be interesting experience to build and manage Notary Node and bring something new to the KomodoPlatform. I will run only one node in Europe region.</p>
+<p>I am entering this year Notary Nodes electionis on my own. I do not have any manager behind me. I joined because I wanted to experience building, managing Notary Node and bringing something new to the Komodo Platform. I will run only one node in Europe region.</p>
 
 <!--
 Github's Octocat was designed by Simon Oxley, alongside the white bird Twitter used (before they received a proper logo) as part of a usual routine of cranking out images for iStock. GitHub saw it, and wanted it, presumably under the notion that it can represent how complex code combines to create peculiar things, much like the octopuss... except the CEO of GitHub called it an octocat, and it has been the octocat since <a href="https://www.quora.com/GitHub/What-is-the-story-behind-GitHub%E2%80%99s-octocat-mascot" target="_blank">[via]</a>.
@@ -336,56 +336,35 @@ Support the repo by starring or forking it!
     <div class="col-md-10 col-md-offset-1">
       <h2 id="what-i-give-back-to-the-komodo-community">What I give back to the Komodo community</h2>
 
-<p>My proposal is based around Notary nodes modernization. Currently in order to run notary node,
-physical server is needed with a lot of disk space and RAM. Standard servers allow you to scale only 
-vertically, which means adding RAM modules or disks. 
-What about if we split the load between multiple servers? By cutting Komodo/Iguana/Bitcoin/assetchains 
-into smaller pieces (containers), we could run each piece of the puzzle on</p>
-
-<ul style="text-align: left;">
-  <li>refactor scripts in komodo repo</li>
-</ul>
-
-<iframe src="https://ghbtns.com/github-btn.html?user=patchkez&amp;repo=kmdplatform&amp;count=false&amp;size=large" frameborder="0" scrolling="0" width="160px" height="30px"></iframe>
-
-<ul style="text-align: left;">
-  <li>dockerize Bitcoin/Komodo/Iguana combo to make the deployment frictionless</li>
-</ul>
-<ul style="text-align: left;">
-  <li>decouple NN software from baremetal and deploy it into Openshift/Kubernetes</li>
-</ul>
-<ul style="text-align: left;">
-  <li>I was thinking to have central docker registry with signed images</li>
-</ul>
-
-<h3 id="pros-of-proposed-solution">Pros of proposed solution</h3>
-<ul>
-  <li>
-    <p>portability across machines
-Docker containers can be build and test locally on dev/test server and final images can be then deployed to Notary Node and started.</p>
-  </li>
-  <li>
-    <p>version control</p>
-  </li>
-  <li>
-    <p>sharing images
-If operators will start using such solution, i</p>
-  </li>
-  <li>
-    <p>minimal overhead
-Docker containers</p>
-  </li>
-  <li>
-    <p>high availability
-Because containers can talk to each other over network,</p>
-  </li>
-  <li>
-    <p>scalability 
-Adding new node to cluster is possible.</p>
-  </li>
-</ul>
+<p>I am member of Dragon Riders team. Please navigate to our <a href="https://dragon-riders.github.io" target="_blank">team page</a> to find out more about what our plans are.</p>
 
 <!--
+My proposal is based around Notary nodes improvements. Currently in order to run notary node,
+physical server is needed with a lot of disk space and RAM. Standard servers allow you to scale only 
+vertically, which means adding RAM modules or disks. With increasing number of assetchains, single server might be not sufficient to handle the load.
+What about if we split the load between multiple servers? By cutting Komodo/Iguana/Bitcoin/assetchains 
+into smaller pieces (containers), we could run each piece of the puzzle ditributed accross multiple nodes.
+
+### Current work
+I already started with dockerizing Komodo platform. You can check my progress here:
+
+<iframe src="https://ghbtns.com/github-btn.html?user=patchkez&repo=kmdplatform&count=false&size=large" frameborder="0" scrolling="0" align="middle" width="45px" height="50px"></iframe>
+
+- dockerize Bitcoin/Komodo/Iguana combo to make the deployment frictionless
+- decouple NN software from baremetal and deploy it into Openshift/Kubernetes
+- have central docker registry with signed images
+
+### Pros of proposed solution
+- portability across machines - Docker containers can be build and tested locally on dev/test server and final images can be then deployed to Notary Node and started.
+- version control
+- sharing images - operators can build the image once and all can deploy the same to their prod servers
+- minimal overhead
+- high availability - in multi-node setup, containers can be started on another node in the cluster in case of failure
+- scalability - new nodes can be added to the cluster to expand the capacity
+
+-->
+<!--
+{: style="text-align: left;"}
 Github's Octocat was designed by Simon Oxley, alongside the white bird Twitter used (before they received a proper logo) as part of a usual routine of cranking out images for iStock. GitHub saw it, and wanted it, presumably under the notion that it can represent how complex code combines to create peculiar things, much like the octopuss... except the CEO of GitHub called it an octocat, and it has been the octocat since <a href="https://www.quora.com/GitHub/What-is-the-story-behind-GitHub%E2%80%99s-octocat-mascot" target="_blank">[via]</a>.
 
 <small>
@@ -469,8 +448,7 @@ Support the repo by starring or forking it!
     <div class="col-md-10 col-md-offset-1">
       <h2 id="hardware">Hardware</h2>
 
-<p>I am the owner of the server and 
-Specs of the server is:</p>
+<p>I am the owner of the server and specifications of the server is:</p>
 <ul>
   <li>Dell PowerEdge 1U server</li>
   <li>2 x Xeon CPUs (24 threads total)</li>
@@ -480,8 +458,7 @@ Specs of the server is:</p>
   <li>dual PSU</li>
 </ul>
 
-<p>Server is located in <a href="http://www.itself.cz/en" target="_blank">ITSelf</a> datacentre in Brno where I have 24x7 access.:
-(map of europe with point in Brno)</p>
+<p>Server is located in <a href="http://www.itself.cz/en" target="_blank">ITSelf</a> datacentre in Brno where I have 24x7 access.</p>
 
 <!--
 Github's Octocat was designed by Simon Oxley, alongside the white bird Twitter used (before they received a proper logo) as part of a usual routine of cranking out images for iStock. GitHub saw it, and wanted it, presumably under the notion that it can represent how complex code combines to create peculiar things, much like the octopuss... except the CEO of GitHub called it an octocat, and it has been the octocat since <a href="https://www.quora.com/GitHub/What-is-the-story-behind-GitHub%E2%80%99s-octocat-mascot" target="_blank">[via]</a>.
@@ -582,15 +559,17 @@ Support the repo by starring or forking it!
 <p>I am not going to buy your votes by promising you KMDs as reward. Notary Node Operators are guards of the Komodo network, so pick your guard carefully!
 I would appreciate if you can vote for me and help to decentralize Notary Nodes across whole world. My VOTE address is:</p>
 
-<p>&lt;  TBD &gt;</p>
-
-<p>If you prefer to vote anonymously you can send votes to my Z address:</p>
-
 <p><span style="color:#26c4f1">
-<strong>zcT5VfsnjXuYyqE2wg5UV7ad9ft6k5YgHmdTqMug2Q287yVCZjBxaz1jLBJTqNHwVAbBgaqScEDvqPwUmzFvrBZz999BbZC</strong>
+<strong>TBD</strong>
 <span></span></span></p>
 
-<p>Details regarding voting can be found <a href="https://goo.gl/Y4nRMY" target="_blank">here.</a></p>
+<p>If you prefer to vote anonymously, you can send VOTE2018 to my Z address:</p>
+
+<p><span style="color:#26c4f1">
+<strong>zcXzCo1L7tTMjGW25vvmLNR8pfAoPuQ8wVQ85YHuYCC2bkRKLrXVyWPfpAbzMG78TKD3Gb1Tz6F3F2AeATnpTsARZv8KQZ2</strong>
+<span></span></span></p>
+
+<p>Details regarding voting can be found <a href="https://goo.gl/Y4nRMY" target="_blank">here</a>.</p>
 
 <!--
 Github's Octocat was designed by Simon Oxley, alongside the white bird Twitter used (before they received a proper logo) as part of a usual routine of cranking out images for iStock. GitHub saw it, and wanted it, presumably under the notion that it can represent how complex code combines to create peculiar things, much like the octopuss... except the CEO of GitHub called it an octocat, and it has been the octocat since <a href="https://www.quora.com/GitHub/What-is-the-story-behind-GitHub%E2%80%99s-octocat-mascot" target="_blank">[via]</a>.
@@ -764,7 +743,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 
   var myQuotes =  new Array();
   
-    myQuotes.push("patchkez - Komodo Notary Node operator proposal");
+    myQuotes.push("patchkez - Komodo Notary Node Candidate proposal");
   
 
   function shuffle(array) {
@@ -808,7 +787,7 @@ $(window).scroll(toggleNavCollapse);$(function(){$("a.page-scroll").bind("click"
 <script>
 function addTohistory() {
   if (!window.location.host.startsWith("127.0.0.1")) {
-    history.pushState({}, '', 'https://le4ker.github.io/');
+    history.pushState({}, '', 'https://patchkez.github.io/');
   }
 }
 </script>

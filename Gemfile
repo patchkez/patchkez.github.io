@@ -7,7 +7,7 @@ gem 'html-proofer'
 #gem "jekyll-reload", {
 #  group: "jekyll-plugins"
 #}
-group :jekyll_plugins do
-    gem 'jekyll-livereload'
-end
+# group :jekyll_plugins do
+#    gem 'jekyll-livereload'
+# end
 
